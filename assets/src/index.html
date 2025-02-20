@@ -59,7 +59,30 @@
             color: #fff;
             margin-top: 10px;
         }
+        .translate-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .translate-button:hover {
+            background: #0056b3;
+        }
     </style>
+    <script>
+        function translateText() {
+            var textElement = document.getElementById("translate-text");
+            if (textElement.innerText === "Jika uang anda kebanyakan, mungkin bisa dipindahkan ke rekening saya 😆") {
+                textElement.innerText = "If you have too much money, maybe you can transfer it to my account 😆";
+            } else {
+                textElement.innerText = "Jika uang anda kebanyakan, mungkin bisa dipindahkan ke rekening saya 😆";
+            }
+        }
+    </script>
 </head>
 <body>
     <nav>
@@ -75,7 +98,8 @@
     </div>
     <div class="qr-section">
         <img src="qr.jpg" alt="QR Code">
-        <p>Jika uang anda kebanyakan, mungkin bisa dipindahkan ke rekening saya 😆</p>
+        <p id="translate-text">Jika uang anda kebanyakan, mungkin bisa dipindahkan ke rekening saya 😆</p>
+        <button class="translate-button" onclick="translateText()">Translate</button>
     </div>
 </body>
 </html>
