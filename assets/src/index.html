@@ -1,14 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Static Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Static Website</title>
     <base href="/">
-
-    <link type="text/css" rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+        }
+        .container {
+            padding: 20px;
+        }
+        img {
+            width: 150px;
+            transition: transform 0.3s;
+        }
+        img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #ff4081;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        .cta-button:hover {
+            background: #e91e63;
+        }
+        .qr-section {
+            margin-top: 30px;
+        }
+        .qr-section img {
+            width: 200px;
+        }
+        .qr-section p {
+            font-size: 16px;
+            color: #fff;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <img src="logo.png" alt="DFINITY logo" />
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+        <img src="logo.png" alt="DFINITY logo">
+        <h1>Welcome to Our Static Website</h1>
+        <p>Experience a simple yet engaging design.</p>
+        <a href="#explore" class="cta-button">Explore Now</a>
+    </div>
+    <div class="qr-section">
+        <img src="qr.jpg" alt="QR Code">
+        <p>Jika uang anda kebanyakan, mungkin bisa dipindahkan ke rekening saya 😆</p>
+    </div>
 </body>
 </html>
